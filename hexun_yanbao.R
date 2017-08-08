@@ -20,10 +20,13 @@ yanbao_spyder <- function(page) {
 
 # 抓取第1页的网址，判断爬虫函数yanbao_spyder是否存在问题
 yanbao_spyder(1)
+
+# 抓取前20页
 yanbao1_20 <- lapply(1:20, yanbao_spyder)
 yanbao1_20
 
 bind_rows(yanbao1_20) %>% 
+  DT::datatable()
   
 
 
