@@ -2,6 +2,8 @@
 ######## 抓取深圳Q房网的小区房价信息  #########         
 ##--------------------------------------------
 
+# 深圳Q房网：http://shenzhen.qfang.com/garden
+
 library(rvest)
 library(stringr)
 library(dplyr)
