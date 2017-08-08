@@ -25,8 +25,12 @@ yanbao_spyder(1)
 yanbao1_20 <- lapply(1:20, yanbao_spyder)
 yanbao1_20
 
+# bind_rows()函数来自dplyr包，可以直接把一个由数据框组成的列表按行合并为一个更大的数据框
+# 这里也可以用`do.call(yanbao1_20, rbind)`
 bind_rows(yanbao1_20) %>% 
   DT::datatable()
+
+## 注：这里的代码并不完整，并没有考虑到抓取失败的问题，有时间再重新写
   
 
 
