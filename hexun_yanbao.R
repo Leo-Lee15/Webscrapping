@@ -7,10 +7,13 @@ library(rvest)
 library(stringr)
 library(dplyr)
 library(magrittr)
+
+html_session("http://yanbao.stock.hexun.com/listnews1_1.shtml")
+
 yanbao_spyder <- function(page) {
   base_url <- "http://yanbao.stock.hexun.com/listnews1_"
   page_content <- paste0("http://yanbao.stock.hexun.com/listnews1_", page, ".shtml") %>% 
-    read_html(encoding = "GBK") %>% 
+    read_html(encoding = "GBK") %>%  ## 注意：这里字符集的设定只能是`GBK`
     html_table(fill = TRUE) %>% 
     .[[1]] %>% 
     .[, -6]
