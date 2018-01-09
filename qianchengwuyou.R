@@ -90,8 +90,7 @@ dm_spyder <- function(website) {
     html_text() %>% 
     .[-1] ->
     job_salary
-  job_salary
-  
+
   web0 %>% 
     html_nodes(css = "div.el>span.t5") %>% 
     html_text() %>% 
