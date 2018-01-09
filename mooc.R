@@ -3,6 +3,10 @@
 ####                       慕课网爬虫                   ####
 #                                                          #
 ##%######################################################%##
+
+## Author: Leo
+## Last update: 2018-01-10 0:26
+
 library(rvest)
 library(stringr)
 library(dplyr)
